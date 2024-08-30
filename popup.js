@@ -100,6 +100,15 @@ input.addEventListener('blur', () => {
 });
 
 
-
-
 // Logic
+document.getElementById('check-brightness').addEventListener('click', async () => {
+    // 現在のタブを取得
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    // コンテンツスクリプトにメッセージを送信
+    chrome.tabs.sendMessage(tab.id, { action: 'calculateBrightness' }, (response) => {
+        if (response) {
+            console.log('Brightness Matrix from clicked image:', response.brightnessMatrix);
+        }
+    });
+});

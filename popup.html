@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div id="hero">
+        <img src="icon.png" width="64" height="64" class="mb-32 mt-32">
+        <button class="button icon_cursor font-bold width-max">Apply</button>
+    </div>
+    <div>
+        <h2>Settings</h2>
+        <ul class="listview">
+            <li class="card listview__item setting">
+                <div id="step_indicator">
+                    <div class="setting__row">
+                        <h3 class="setting__label">Number of gradient steps</h3>
+                        <input id="step_value" class="setting__value text-lg font-bold" type="number" min="0" max="255" value="10">
+                    </div>
+                </div>
+            </li>
+            <li class="card listview__item">
+                <div class="indicator_header">
+                    <h3>Threshold</h3>
+                    <p>34</p>
+                </div>
+                <div class="indicator indicator--100"></div>
+            </li>
+        </ul>
+    </div>
+    <div id="footer">
+        <ul class="onelineList mt-24 border-top">
+            <li class="onelineList__item"><a href="">Report bugs</a></li>
+            <li class="onelineList__item"><a href="">Jump to the repository</a></li>
+        </ul>
+    </div>
+    <script type="module" src="popup.js" ></script>
+</body>
+</html>

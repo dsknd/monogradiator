@@ -1,0 +1,184 @@
+/*layout*/
+body {
+    width: 350px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #F2F2F2;
+    padding: 0 16px;
+    color: #555555;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+
+/* project */
+.listview {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listview__item {
+    margin-bottom: 24px;
+}
+
+.listview__item:last-child {
+    margin-bottom: 0;
+}
+
+/* component */
+
+.icon_cursor::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./cursor-icon.png);
+    background-size: cover;
+    position: absolute;
+    top:25%;
+    left: 16px;
+}
+
+.button {
+    background-color: #333333;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 32px;
+    padding: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #666666;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.onelineList {
+    list-style-type: none;
+    padding: 8px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.onelineList__item {
+    margin-left: 16px;
+}
+
+.onelineList__item:first-child {
+    margin-left: 0;
+}
+
+.setting {
+    padding: 8px 16px 0;
+    margin: 0 -16px;
+}
+
+.setting__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.setting__label {
+    font-size: 16px;
+    margin-right: 16px;
+    flex: 1 0;
+}
+
+.setting__value {
+    /* デフォルトのnumberタイプのinputのスタイルを無効にする */
+    border: none;
+    background: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    -moz-appearance: textfield; /* Firefox用 */
+    -webkit-appearance: none; /* Chrome, Safari, Edge用 */
+    -ms-appearance: textfield; /* Internet Explorer用 */
+    appearance: none; /* 標準的なプロパティ */
+
+    /* 特定のブラウザでの余計なスタイルを無効にする */
+    width: auto;
+    min-width: 0;
+    text-align: center; /* デフォルトで数値を右揃えにする場合 */
+
+    color: #36D1DF;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.setting__value:focus {
+    border-bottom: solid 1px #36D1DF;
+}
+
+.setting__value::-webkit-inner-spin-button,
+.setting__value::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.setting__value::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.indicator {
+    width: 100%;
+    height: 100px;
+}
+
+
+
+
+
+/*--------------------------------
+util
+---------------------------------*/
+
+.text-lg {
+    font-size: 24px;
+}
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.width-max {
+    width: 100%;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.border-top {
+    border-top: 1px solid #CCCCCC;
+}
+
